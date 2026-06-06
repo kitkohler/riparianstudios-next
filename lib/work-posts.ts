@@ -14,7 +14,7 @@ export const WORK_POSTS: WorkPost[] = [
     slug: 'bear-yuba-land-trust-independence-trail',
     title: 'Bear Yuba Land Trust Kicks Off Fundraising for Independence Trail Rebuild',
     date: 'October 2020',
-    needsVideo: true,
+    videoId: '-6giUil59vw',
     body: `In August of this year, the wooden flumes of the iconic accessible Independence Trail were severely damaged by the Jones Fire. Ignited by lightning from the now notorious lightning storm of late summer 2020, they made quick work of much of the trail built in by John Olmstead in the 1970s.
 
 To kick off Bear Yuba Land Trust's rebuilding fundraiser, BYLT teamed up with Alden Olmstead and Riparian Studios to produce a trailer for a more comprehensive film about the trail's origins, history, and the damage that occurred in the Jones Fire. The trailer, which premiered at BYLT's Open Spaces, Wild Places Gala on Friday, blends archival footage and photos with fire footage and photography provided by Elias Funez of The Union as well as post-fire footage shot by Riparian Studios founder Kit Kohler. Riparian Studios also leveraged their post-production facility in Nevada City to bring the piece together in collaboration with Olmstead and BYLT's Erika Seward.
@@ -131,7 +131,6 @@ This film represents Riparian Studios' second production in partnership with the
     title: 'CHIRP Shares the Story of Visibility Through Art',
     date: 'September 2020',
     videoId: 'AOxNguG0Sv0',
-    needsVideo: true, // Not in playlist, flagged for manual review
     body: `Local film and video production company Riparian Studios is honored to announce the release of a short film created to tell the story of the Visibility Through Art project. The art show brings local non-native artists together with Nisenan tribe members to create artwork that authentically represents the Nisenan and their rich but nearly forgotten history.
 
 The simple film, created by Riparian Studios' founder Kit Kohler, premiered at a recent fundraiser for CHIRP, the California Heritage Indigenous Research Project. The livestreamed event featured performances from Lyla June, MaMuse and Marie Sioux as well as talks and stories from Nisenan tribal members.
@@ -144,7 +143,7 @@ A recording of the livestream can be viewed on YouTube. Those wishing to contrib
     slug: 'ponderosa-west',
     title: 'Nevada County Releases Film on Fuel Break Project',
     date: 'April 2020',
-    needsVideo: true,
+    videoId: 'zFHvVE6t7L4',
     body: `NEVADA CITY, CA — The County of Nevada today released a film telling the story of the Ponderosa West Grass Valley Defense Zone project, a shaded fuel break currently in progress, funded by a grant from CAL FIRE's Fire Prevention Program. The film's narrative is shared in a series of interviews with various project stakeholders from the County of Nevada, CAL FIRE, and the Fire Safe Council of Nevada County. The film, produced by Riparian Studios, was produced and directed by Kit Kohler with cinematography from Val Camp. Sheila Cameron, a communications contractor for the County, was the consulting producer.
 
 "It's a tremendous honor for us to be able to work with this team that's making our community safer and more resilient to the threat of wildfire," says Riparian Studios owner Kit Kohler. "We are hopeful that this film will raise awareness about what our county is doing in the threat of increased fire risk, and that it will inspire community members to research the ways they can participate in this effort."
@@ -155,7 +154,7 @@ Riparian Studios is a boutique creative agency and production company located in
     slug: 'youth-ride-against-racism',
     title: 'Youth Ride Against Racism',
     date: 'July 2018',
-    needsVideo: true,
+    videoId: 'fMRe585xQSc',
     body: `When local youth mentor Xylem Lara Dey reached out for help capturing the Youth Ride Against Racism in Nevada City's downtown, we didn't hesitate. The ride, organized by local black middle schoolers Izaiyah and Nature, was their way of standing up to the anonymous man who racially harassed them while riding their bikes on Nevada City's Spring Street.
 
 With event day help of an all-star team of local production talent including Akhi Lavoie, Ahmed Ragab, and drone pilot Paul Marwood, Riparian Studios' Kit Kohler volunteered his time and creative energy to produce a short documentary sharing these two young men's story. The video, shared on Facebook, has been viewed over 18,000 times as of the publishing of this post — a testament to just how inspirational these two young men's story really is. We can't wait to see what these two tackle next.`,
@@ -220,7 +219,7 @@ Past projects for Sierra Harvest had included Riparian Studios' cinematographer 
     slug: 'legendary-vineyards',
     title: 'Trailer Released for Film Series Focused on Legendary Vineyards',
     date: 'November 2019',
-    needsVideo: true,
+    videoId: 'jwvG-Aljt1w',
     body: `Riparian Studios and Zinfandel Advocates and Producers have teamed up again to produce a series of CDFA-funded films promoting Zinfandel wine in California and beyond. This time, the series is focused in on "Legendary Zinfandel Vineyards" made into vineyard designated Zinfandel. Vineyard designates wines are wines that are at least 95% sourced from one single vineyard, unlike many other types of wine that include grapes from various different vineyards.
 
 Riparian Studios' producer and editor Kit Kohler along with cinematographer Val Camp travelled the state visiting some of the most unique, special, and sought after vines in the country for the films. Vineyards featured in the series include Monte Rosso, Bedrock, Lytton Springs and Maple Vineyard in Sonoma County, Black Sears and RW Moore in Napa, Lizzy James, ZinStar and Jesse's Grove in Lodi, and Peachy Canyon D Block, Ueberroth, and Paper Street in Paso Robles. Interviews include chats with Larry Turley of Turley Wine Cellars, Janell Dusi of J Dusi, Joel Peterson of Once and Future, and David Gates of Ridge, among many, many others.`,
