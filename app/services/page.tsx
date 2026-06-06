@@ -28,7 +28,7 @@ const PROCESS = [
 ];
 
 const ADDONS = [
-  { name: 'Custom film score', desc: 'Original music composition written specifically for your film.' },
+  { name: 'Multicam livestream', desc: 'Live event streaming with multiple cameras for conferences, community events, performances, and broadcasts.' },
   { name: 'Motion graphics & animation', desc: 'Complex animation work including data visualization, kinetic typography, and custom animated sequences.' },
   { name: 'Social media video', desc: 'Additional cuts optimized for Instagram, YouTube, LinkedIn, and other platforms.' },
   { name: 'DCP & cinema delivery', desc: 'Digital Cinema Package (DCP) creation and delivery for theatrical screenings, film festivals, and live events.' },
