@@ -96,8 +96,8 @@ export default function AboutPage() {
       {/* Crew */}
       <section style={{ padding: '88px 48px', borderTop: '1px solid rgba(55,57,66,0.08)' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#6B6B6E', marginBottom: 14 }}>Crew</div>
-          <h2 style={{ fontFamily: '"Roboto Slab", serif', fontWeight: 700, fontSize: 34, lineHeight: 1.15, letterSpacing: '-0.02em', color: '#373942', margin: '14px 0 24px' }}>Regular collaborators</h2>
+          <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#6B6B6E', marginBottom: 14 }}>Sierra Foothills production crew</div>
+          <h2 style={{ fontFamily: '"Roboto Slab", serif', fontWeight: 700, fontSize: 34, lineHeight: 1.15, letterSpacing: '-0.02em', color: '#373942', margin: '14px 0 24px' }}>Frequent collaborators</h2>
           <p style={{ fontFamily: '"Open Sans", sans-serif', fontSize: 16, lineHeight: 1.8, color: '#6B6B6E', margin: '0 0 56px', maxWidth: 680 }}>
             Each project assembles the right team from a trusted Sierra Foothills-based bench. These are the people Riparian works with most often.
           </p>
