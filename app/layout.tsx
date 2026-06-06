@@ -4,12 +4,23 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Riparian Studios — Video Production | Nevada City, CA",
+  metadataBase: new URL('https://www.riparianstudios.com'),
+  title: {
+    default: "Riparian Studios — Video Production | Nevada City, CA",
+    template: "%s | Riparian Studios",
+  },
   description: "Riparian Studios is a video production company in Nevada City, CA. We make brand films, campaign videos, and documentary work for nonprofits, health systems, and businesses across Northern California and the Sierra Foothills.",
   openGraph: {
     title: "Riparian Studios — Video Production | Nevada City, CA",
     description: "Brand film, campaign video, and documentary production based in Nevada City. Serving nonprofits, health systems, and businesses across Northern California.",
     siteName: "Riparian Studios",
+    type: "website",
+    url: "https://www.riparianstudios.com",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Riparian Studios — Video Production | Nevada City, CA",
+    description: "Brand film, campaign video, and documentary production based in Nevada City, CA.",
   },
 };
 

@@ -1,8 +1,14 @@
 import type { Metadata } from 'next';
+import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
   title: 'Contact — Riparian Studios | Video Production, Nevada City CA',
   description: 'Get in touch with Riparian Studios, a video production company in Nevada City, CA. Serving nonprofits, health systems, and businesses across Nevada County and Northern California.',
+  openGraph: {
+    title: 'Contact Riparian Studios',
+    description: 'Get in touch about your video production project.',
+    type: 'website',
+  },
 };
 
 export default function ContactPage() {
@@ -39,19 +45,7 @@ export default function ContactPage() {
           </div>
 
           <div>
-            <div style={{ marginBottom: 24 }}>
-              <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 10, letterSpacing: '0.13em', textTransform: 'uppercase', color: '#6B6B6E', marginBottom: 8 }}>Email directly</div>
-              <a href="mailto:kit@riparianstudios.com" style={{ fontFamily: '"Roboto Slab", serif', fontWeight: 700, fontSize: 22, color: 'var(--rs-teal)', textDecoration: 'none' }}>
-                kit@riparianstudios.com
-              </a>
-            </div>
-
-            <div style={{ marginTop: 48, padding: '32px', background: '#F4EFE6', borderRadius: 4 }}>
-              <div style={{ fontFamily: '"Roboto Slab", serif', fontSize: 18, fontWeight: 700, color: '#373942', marginBottom: 12 }}>What to include</div>
-              <p style={{ fontFamily: '"Open Sans", sans-serif', fontSize: 15, lineHeight: 1.8, color: '#6B6B6E', margin: '0 0 16px' }}>
-                A quick description of your organization, what you're trying to communicate, and a rough sense of timeline and budget is enough to get a useful conversation started. We'll take it from there.
-              </p>
-            </div>
+            <ContactForm />
           </div>
         </div>
       </section>

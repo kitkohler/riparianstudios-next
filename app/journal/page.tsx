@@ -3,8 +3,13 @@ import Link from 'next/link';
 import { JOURNAL_POSTS } from '@/lib/journal-posts';
 
 export const metadata: Metadata = {
-  title: 'Field Notes — Riparian Studios',
+  title: 'Field Notes — Video Production Journal | Riparian Studios',
   description: 'Dispatches from production. Notes on the work, the process, and the organizations we make films for.',
+  openGraph: {
+    title: 'Field Notes — Riparian Studios',
+    description: 'Dispatches from production. Notes on the work, the process, and the organizations we make films for.',
+    type: 'website',
+  },
 };
 
 export default function JournalPage() {
