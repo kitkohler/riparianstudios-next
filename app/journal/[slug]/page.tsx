@@ -61,6 +61,21 @@ export default function JournalPostPage({ params }: { params: { slug: string } }
         </div>
       </section>
 
+      {post.videoId2 && (
+        <div style={{ background: '#0A0804' }}>
+          <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 48px 48px' }}>
+            <div style={{ aspectRatio: '16/9', width: '100%' }}>
+              <iframe
+                src={`https://www.youtube.com/embed/${post.videoId2}?rel=0`}
+                style={{ width: '100%', height: '100%', border: 'none', display: 'block' }}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      )}
+
       <div style={{ borderTop: '1px solid rgba(55,57,66,0.1)', padding: '40px 48px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <Link href="/journal" style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--rs-teal)', textDecoration: 'none' }}>
