@@ -53,28 +53,28 @@ export default function JournalPostPage({ params }: { params: { slug: string } }
 
       <section style={{ padding: '72px 48px 96px' }}>
         <div style={{ maxWidth: 680, margin: '0 auto' }}>
-          {post.body.split('\n\n').filter(Boolean).map((para, i) => (
-            <p key={i} style={{ fontFamily: '"Open Sans", sans-serif', fontSize: 17, lineHeight: 1.85, color: '#6B6B6E', margin: '0 0 28px' }}>
-              {para.trim()}
-            </p>
-          ))}
+          {post.body.split('\n\n').filter(Boolean).map((para, i) => {
+            const embedMatch = para.trim().match(/^\[embed:([a-zA-Z0-9_-]+)\]$/);
+            if (embedMatch) {
+              return (
+                <div key={i} style={{ aspectRatio: '16/9', width: '100%', margin: '8px 0 36px' }}>
+                  <iframe
+                    src={`https://www.youtube.com/embed/${embedMatch[1]}?rel=0`}
+                    style={{ width: '100%', height: '100%', border: 'none', display: 'block', borderRadius: 4 }}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              );
+            }
+            return (
+              <p key={i} style={{ fontFamily: '"Open Sans", sans-serif', fontSize: 17, lineHeight: 1.85, color: '#6B6B6E', margin: '0 0 28px' }}>
+                {para.trim()}
+              </p>
+            );
+          })}
         </div>
       </section>
-
-      {post.videoId2 && (
-        <div style={{ background: '#0A0804' }}>
-          <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 48px 48px' }}>
-            <div style={{ aspectRatio: '16/9', width: '100%' }}>
-              <iframe
-                src={`https://www.youtube.com/embed/${post.videoId2}?rel=0`}
-                style={{ width: '100%', height: '100%', border: 'none', display: 'block' }}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-          </div>
-        </div>
-      )}
 
       <div style={{ borderTop: '1px solid rgba(55,57,66,0.1)', padding: '40px 48px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
