@@ -1,11 +1,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { getPlaylistVideos } from '@/lib/youtube';
+import { getRecentJournalPosts } from '@/lib/journal-posts';
 import RecentWork from '@/components/RecentWork';
 import HeroScene from '@/components/HeroScene';
 
 export default async function HomePage() {
-  const videos = await getPlaylistVideos();
+  const [videos, recentPosts] = await Promise.all([
+    getPlaylistVideos(),
+    Promise.resolve(getRecentJournalPosts(4)),
+  ]);
 
   return (
     <div>
@@ -45,6 +49,33 @@ export default async function HomePage() {
 
       {/* Recent Work — server-fetched, client interactive */}
       <RecentWork videos={videos.slice(0, 3)} />
+
+      {/* Field Notes strip */}
+      {recentPosts.length > 0 && (
+        <section style={{ background: '#F4EFE6', padding: '88px 48px' }}>
+          <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 48 }}>
+              <div>
+                <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#6B6B6E', marginBottom: 14 }}>From the studio</div>
+                <h2 style={{ fontFamily: '"Roboto Slab", serif', fontWeight: 700, fontSize: 34, lineHeight: 1.15, letterSpacing: '-0.02em', color: '#373942', margin: 0 }}>Field notes</h2>
+              </div>
+              <Link href="/journal" style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#6B6B6E', textDecoration: 'none' }}>
+                All posts →
+              </Link>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 28 }}>
+              {recentPosts.map(post => (
+                <Link key={post.slug} href={`/journal/${post.slug}`} style={{ textDecoration: 'none', display: 'block', paddingTop: 24, borderTop: '1px solid rgba(55,57,66,0.15)' }}>
+                  <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--rs-accent)', marginBottom: 10 }}>{post.category}</div>
+                  <h3 style={{ fontFamily: '"Roboto Slab", serif', fontWeight: 700, fontSize: 16, lineHeight: 1.4, color: '#373942', margin: '0 0 12px' }}>{post.title}</h3>
+                  <p style={{ fontFamily: '"Open Sans", sans-serif', fontSize: 13.5, lineHeight: 1.65, color: '#6B6B6E', margin: '0 0 14px' }}>{post.excerpt}</p>
+                  <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 10, letterSpacing: '0.08em', color: 'rgba(107,107,110,0.6)' }}>{post.date}</div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* About teaser */}
       <section style={{ background: '#F4EFE6', padding: '100px 48px' }}>
