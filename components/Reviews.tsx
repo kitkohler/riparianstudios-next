@@ -44,20 +44,9 @@ export default function Reviews({ data }: { data: PlaceReviewsResult }) {
               <p style={{ fontFamily: '"Open Sans", sans-serif', fontSize: 15, lineHeight: 1.8, color: '#373942', margin: '0 0 24px', flex: 1 }}>
                 "{review.text}"
               </p>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                {review.photoUri && (
-                  <img
-                    src={review.photoUri}
-                    alt={review.author}
-                    width={32}
-                    height={32}
-                    style={{ borderRadius: '50%', objectFit: 'cover' }}
-                  />
-                )}
-                <div>
-                  <div style={{ fontFamily: '"Roboto Slab", serif', fontWeight: 700, fontSize: 13, color: '#1A1408' }}>{review.author}</div>
-                  <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 10, letterSpacing: '0.1em', color: '#6B6B6E', textTransform: 'uppercase', marginTop: 2 }}>{review.relativeTime}</div>
-                </div>
+              <div>
+                <div style={{ fontFamily: '"Roboto Slab", serif', fontWeight: 700, fontSize: 13, color: '#1A1408' }}>{review.author}</div>
+                <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 10, letterSpacing: '0.1em', color: '#6B6B6E', textTransform: 'uppercase', marginTop: 2 }}>{review.relativeTime}</div>
               </div>
             </div>
           ))}
