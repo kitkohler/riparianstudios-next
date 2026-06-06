@@ -28,7 +28,7 @@ export default function JournalPostPage({ params }: { params: { slug: string } }
             ← Field notes
           </Link>
           <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--rs-accent)', marginBottom: 16 }}>
-            {post.category} · {post.date}
+            {post.category} · {post.date} · Kit Kohler
           </div>
           <h1 style={{ fontFamily: '"Roboto Slab", serif', fontWeight: 700, fontSize: 'clamp(28px, 4vw, 52px)', lineHeight: 1.1, letterSpacing: '-0.02em', color: '#E2DFD9', margin: 0, maxWidth: 800 }}>
             {post.title}
