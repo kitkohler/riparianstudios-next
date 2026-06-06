@@ -10,26 +10,26 @@ const PROCESS = [
   {
     phase: 'Pre-Production',
     tagline: 'Where the work actually starts.',
-    body: "We open with a kickoff call to get clear on the story, the audience, and the right people to tell it. From there we write interview questions, review them with you, flag who should and shouldn't be asked what, and handle all subject booking. You arrive on shoot day knowing exactly what's going to happen.",
-    includes: ['Story development and kickoff', 'Interview question writing and client review', 'Subject identification and scheduling', 'Production logistics'],
+    body: "We open with a kickoff call to get clear on the story, the audience, and the right people to tell it. From there we write interview questions, review them with you, and work collaboratively to identify the right subjects. We can handle booking, or you can. Either way, you arrive on shoot day knowing exactly what's going to happen.",
+    includes: ['Story development and kickoff', 'Interview question writing and client review', 'Collaborative subject identification', 'Subject scheduling and production logistics'],
   },
   {
     phase: 'Production',
     tagline: 'Shoot day.',
-    body: "We show up, run the interviews, and direct b-roll. Our crew scales to what the project needs — sometimes that's two people, sometimes more. The standard of work is the same either way.",
+    body: "We show up, run the interviews, and direct b-roll. Our crew scales to what the project needs. Sometimes that's two people, sometimes more. The standard of work is the same either way.",
     includes: ['Interview direction', 'B-roll production', 'Location sound', 'On-set production management'],
   },
   {
     phase: 'Post-Production',
     tagline: 'From raw footage to finished film.',
     body: "We transcribe everything, build a rough assembly of the interviews for your review, then layer in b-roll, music, and graphics through to a polished final cut. You'll have clear review points along the way.",
-    includes: ['Transcription', 'Rough assembly and client review', 'Full picture and sound edit', 'Color, mix, and final delivery'],
+    includes: ['Transcription', 'Rough assembly and client review', 'Full picture and sound edit', 'Stock music licensing', 'Simple animations', 'Color, mix, and final delivery'],
   },
 ];
 
 const ADDONS = [
   { name: 'Custom score', desc: 'Original music composition tailored to the film.' },
-  { name: 'Motion graphics & animation', desc: 'Title cards, data visualization, and animated sequences with Jon Cooksey.' },
+  { name: 'Motion graphics & animation', desc: 'Complex animation work including data visualization, kinetic typography, and custom animated sequences.' },
   { name: 'Social and short-form cuts', desc: 'Additional edits optimized for Instagram, YouTube, and other platforms.' },
   { name: 'Broadcast and event formats', desc: 'Delivery in any format your venue or network requires.' },
 ];
@@ -45,7 +45,7 @@ export default function ServicesPage() {
             A clear process.<br />A finished film.
           </h1>
           <p style={{ fontFamily: '"Open Sans", sans-serif', fontSize: 17, lineHeight: 1.7, color: 'rgba(244,239,230,0.65)', maxWidth: 560, margin: 0 }}>
-            Most clients come to us with a story and a rough sense of what they want. Some come with just the story. Either way, we know how to get from that first conversation to a finished film — and we can step in at any point in that process.
+            Most clients come to us with a story and a rough sense of what they want. Some come with just the story. Either way, we know how to get from that first conversation to a finished film. And we can step in at any point in that process.
           </p>
         </div>
       </div>
