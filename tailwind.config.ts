@@ -8,9 +8,18 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Open Sans', 'system-ui', 'sans-serif'],
+        slab: ['Roboto Slab', 'serif'],
+        mono: ['DM Mono', 'monospace'],
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        accent:  '#B8935A',
+        dark:    '#1A1408',
+        teal:    '#00535C',
+        cream:   '#F4EFE6',
+        body:    '#373942',
+        muted:   '#6B6B6E',
       },
     },
   },
