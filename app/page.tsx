@@ -2,13 +2,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getPlaylistVideos } from '@/lib/youtube';
 import { getRecentJournalPosts } from '@/lib/journal-posts';
+import { getPlaceReviews } from '@/lib/reviews';
 import RecentWork from '@/components/RecentWork';
 import HeroScene from '@/components/HeroScene';
+import Reviews from '@/components/Reviews';
 
 export default async function HomePage() {
-  const [videos, recentPosts] = await Promise.all([
+  const [videos, recentPosts, reviewData] = await Promise.all([
     getPlaylistVideos(),
     Promise.resolve(getRecentJournalPosts(4)),
+    getPlaceReviews(),
   ]);
 
   return (
@@ -111,6 +114,8 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      {reviewData && <Reviews data={reviewData} />}
 
       {/* CTA band */}
       <section style={{ background: 'var(--rs-teal)', padding: '88px 48px', textAlign: 'center' }}>
