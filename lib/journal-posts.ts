@@ -17,6 +17,7 @@ export const JOURNAL_POSTS: JournalPost[] = [
     date: 'December 2025',
     isoDate: '2025-12-10',
     category: 'New Work',
+    videoId: 'DzSQe4mn5Xs',
     excerpt: 'When the Sierra Nevada Memorial Hospital Foundation came to us, they needed two things: a film explaining the Foundation\'s role, and a campaign showing the human breadth of who supports it.',
     body: `Sierra Nevada Memorial Hospital is the kind of institution most people don't think about until they need it. It's there when your child breaks an arm, when a neighbor has a cardiac event, when someone in your family gets a cancer diagnosis. What fewer people know is that SNMH is a nonprofit, and that a foundation of donors, volunteers, and community partners is part of what keeps it running.
 
@@ -28,15 +29,13 @@ The first film was designed to do a specific job: open donor presentations and a
 
 Our answer was the same answer we come back to on almost every project: lead with real people talking about real experience. Dr. Scott Neeley, CEO of Sierra Nevada Memorial Hospital, guides the film through the Foundation's role and reach. Interviews with staff and community members fill in the picture -- the residency program, the emergency department, the cancer center, the $1.3 million ICCU campaign that showed what community investment can actually accomplish. Authenticity travels. It works in a boardroom and it works on a screen.
 
-Watch the Work of the Foundation film: https://www.youtube.com/watch?v=PN_I3RaWCgA
-
 The second project was a different kind of challenge, and honestly, a refreshing one.
 
 The Foundation came to us with the seed of an idea: a series of short, direct-to-camera spots featuring locals sharing how they support the hospital. One line, one person, one location that matched the message. A Red Rose Society donor at the North Star House. An auxiliary volunteer at the cancer center. An ambulance crew member at the ambulance bay. A board member accepting a donated vehicle through the Foundation's Wheels for Wellness car donation program. A doctor teeing off at the Nevada County Country Club to talk about the annual Golf Classic fundraiser.
 
 We ran with it. Imagining each location, matching the visual environment to what was being said -- that's the kind of conceptual problem that's genuinely fun to solve. The result is a :30 spot and six :10-:15 second social clips, built for theater advertising, social media, and digital display, with a closing call to action pointing viewers to the Foundation's giving page.
 
-Watch the I Support Sierra Nevada campaign: https://www.youtube.com/watch?v=Nh_-tlHiCic
+Watch the I Support Sierra Nevada campaign: https://www.youtube.com/watch?v=Be2ITQPPU6I
 
 We didn't know the Foundation well when we started this work. We do now. That relationship -- built through a shared commitment to telling the hospital's story honestly -- has already led to the next project. That's how it tends to go when a client is this engaged and the subject matter is this important to the community.
 
