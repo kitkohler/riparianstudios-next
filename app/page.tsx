@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getPlaylistVideos } from '@/lib/youtube';
 import RecentWork from '@/components/RecentWork';
+import HeroScene from '@/components/HeroScene';
 
 export default async function HomePage() {
   const videos = await getPlaylistVideos();
@@ -10,7 +11,7 @@ export default async function HomePage() {
     <div>
       {/* Hero */}
       <section style={{ position: 'relative', height: '100vh', minHeight: 640, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, #1C1208 0%, #6B3A1E 40%, #B8652A 75%, #D4924A 100%)' }} />
+        <div style={{ position: 'absolute', inset: 0 }}><HeroScene /></div>
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(10,8,4,0.55) 0%, rgba(10,8,4,0.2) 40%, rgba(10,8,4,0.65) 100%)' }} />
         <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: 2, background: 'linear-gradient(to bottom, transparent, var(--rs-accent) 20%, var(--rs-accent) 80%, transparent)' }} />
 
