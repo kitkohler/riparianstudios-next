@@ -4,11 +4,11 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Riparian Studios — Video & Brand Production",
-  description: "Riparian Studios makes brand films, campaign videos, and documentary work for health systems, land trusts, fire coalitions, and community organizations. Based in Nevada City, California.",
+  title: "Riparian Studios — Video Production | Nevada City, CA",
+  description: "Riparian Studios is a video production company in Nevada City, CA. We make brand films, campaign videos, and documentary work for nonprofits, health systems, and businesses across Northern California and the Sierra Foothills.",
   openGraph: {
-    title: "Riparian Studios — Video & Brand Production",
-    description: "Nevada City talent. National-caliber work.",
+    title: "Riparian Studios — Video Production | Nevada City, CA",
+    description: "Brand film, campaign video, and documentary production based in Nevada City. Serving nonprofits, health systems, and businesses across Northern California.",
     siteName: "Riparian Studios",
   },
 };

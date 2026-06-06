@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Services — Riparian Studios',
-  description: 'Brand films, campaign video, and documentary production. A clear process from kickoff to final delivery.',
+  title: 'Services — Riparian Studios | Brand Film & Video Production, Northern California',
+  description: 'Brand film, corporate video, nonprofit video production, and documentary services based in Nevada City, CA. A clear process from kickoff to final delivery across Northern California.',
 };
 
 const PROCESS = [

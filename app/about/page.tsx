@@ -3,8 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'About — Riparian Studios',
-  description: 'Nevada City talent. National-caliber work. Meet the team behind Riparian Studios.',
+  title: 'About — Riparian Studios | Video Production, Nevada City CA',
+  description: 'Meet the team behind Riparian Studios, a video production company in Nevada City, CA. Brand films, documentary, and campaign video for nonprofits and businesses across Northern California.',
 };
 
 const CREW = [
@@ -79,7 +79,7 @@ export default function AboutPage() {
               Riparian is a director-led studio that runs lean on purpose. Kit directs every project. The crew scales to fit — a trusted Northern California bench of cinematographers, editors, animators, and production support that assembles around what the work actually needs. Small enough to move fast. Experienced enough to handle anything.
             </p>
             <p style={{ fontFamily: '"Open Sans", sans-serif', fontSize: 16, lineHeight: 1.85, color: '#6B6B6E', margin: '0 0 40px' }}>
-              Current clients span health systems, community organizations, public agencies, and small businesses. Most work happens across the Sierra Foothills, with select projects in Sacramento, the Bay Area, and beyond.
+              Current clients include nonprofits, health systems, conservation districts, fire coalitions, and small businesses. Most video production work happens across Nevada County and the Sierra Foothills, with select projects in Sacramento, the Bay Area, and beyond.
             </p>
             <blockquote style={{ margin: '0 0 40px', padding: '24px 28px', borderLeft: '3px solid var(--rs-accent)', background: '#F4EFE6' }}>
               <p style={{ fontFamily: '"Roboto Slab", serif', fontSize: 20, fontStyle: 'italic', fontWeight: 500, lineHeight: 1.6, color: '#373942', margin: 0 }}>

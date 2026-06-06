@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact — Riparian Studios',
-  description: 'Get in touch with Riparian Studios. Based in Nevada City, California.',
+  title: 'Contact — Riparian Studios | Video Production, Nevada City CA',
+  description: 'Get in touch with Riparian Studios, a video production company in Nevada City, CA. Serving nonprofits, health systems, and businesses across Nevada County and Northern California.',
 };
 
 export default function ContactPage() {
@@ -21,7 +21,7 @@ export default function ContactPage() {
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 96, alignItems: 'start' }}>
           <div>
             <p style={{ fontFamily: '"Open Sans", sans-serif', fontSize: 16, lineHeight: 1.85, color: '#6B6B6E', margin: '0 0 48px' }}>
-              For commissions, collaborations, field production inquiries, and anything else. Riparian responds within one business day.
+              For video production inquiries, collaborations, field production, and anything else. We work with nonprofits, health systems, public agencies, and businesses across Nevada County and Northern California. Riparian responds within one business day.
             </p>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>

@@ -24,7 +24,7 @@ export default async function HomePage() {
               Films worthy<br />of the work.
             </h1>
             <p style={{ fontFamily: '"Open Sans", sans-serif', fontSize: 17, lineHeight: 1.7, color: 'rgba(244,239,230,0.7)', maxWidth: 520, margin: '0 0 44px' }}>
-              Riparian Studios makes brand films, campaign videos, and documentary work for health systems, community organizations, public agencies, and small businesses doing meaningful work.
+              A video production company based in Nevada City, CA. We make brand films, campaign videos, and documentary work for nonprofits, health systems, public agencies, and businesses doing meaningful work across Northern California.
             </p>
             <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
               <Link href="/work" style={{ fontFamily: '"Open Sans", sans-serif', fontSize: 15, fontWeight: 500, color: 'rgba(244,239,230,0.75)', background: 'transparent', border: '1.5px solid rgba(226,223,217,0.25)', padding: '12px 28px', borderRadius: 3, textDecoration: 'none' }}>
@@ -59,7 +59,7 @@ export default async function HomePage() {
               Kit Kohler founded Riparian Studios in Nevada City after nearly a decade making ads for national brand campaigns in San Francisco. The move was deliberate: toward clients whose work matters to this specific place, and away from distance-produced content that never quite lands.
             </p>
             <p style={{ fontFamily: '"Open Sans", sans-serif', fontSize: 16, lineHeight: 1.8, color: '#6B6B6E', margin: '0 0 36px' }}>
-              The studio runs lean on purpose. A tight core that keeps quality high and overhead low, with a trusted Sierra Foothills-based bench that scales to fit what the project actually needs.
+              The studio runs lean on purpose. A tight core that keeps quality high and overhead low, with a trusted Nevada County-based production bench that scales to fit what the project actually needs.
             </p>
             <Link href="/about" style={{ fontFamily: '"Open Sans", sans-serif', fontSize: 14, fontWeight: 600, color: 'var(--rs-teal)', border: '1.5px solid var(--rs-teal)', padding: '11px 24px', borderRadius: 3, textDecoration: 'none', display: 'inline-block' }}>
               About the Team →
