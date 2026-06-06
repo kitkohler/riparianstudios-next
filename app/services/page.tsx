@@ -4,6 +4,11 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Services — Riparian Studios | Brand Film & Video Production, Northern California',
   description: 'Brand film, corporate video, nonprofit video production, and documentary services based in Nevada City, CA. A clear process from kickoff to final delivery across Northern California.',
+  openGraph: {
+    title: 'Services — Riparian Studios',
+    description: 'Brand film, nonprofit video, documentary, and campaign production. A clear process from kickoff to delivery.',
+    type: 'website',
+  },
 };
 
 const PROCESS = [

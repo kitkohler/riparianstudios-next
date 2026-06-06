@@ -5,6 +5,11 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'About — Riparian Studios | Video Production, Nevada City CA',
   description: 'Meet the team behind Riparian Studios, a video production company in Nevada City, CA. Brand films, documentary, and campaign video for nonprofits and businesses across Northern California.',
+  openGraph: {
+    title: 'About Riparian Studios',
+    description: 'Nevada City talent. National-caliber work. A video production company based in the Sierra Nevada foothills.',
+    type: 'website',
+  },
 };
 
 const CREW = [

@@ -5,6 +5,11 @@ import WorkGrid from '@/components/WorkGrid';
 export const metadata: Metadata = {
   title: 'Work — Riparian Studios | Brand Film & Video Production, Northern California',
   description: 'Brand films, documentary, and campaign video work by Riparian Studios, Nevada City CA.',
+  openGraph: {
+    title: 'Work — Riparian Studios',
+    description: 'Brand films, documentary, and campaign video production based in Nevada City, CA.',
+    type: 'website',
+  },
 };
 
 export default async function WorkPage() {
