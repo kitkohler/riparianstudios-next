@@ -68,7 +68,7 @@ export default function AboutPage() {
             </div>
           </div>
           <div>
-            <h2 style={{ fontFamily: '"Roboto Slab", serif', fontWeight: 700, fontSize: 32, lineHeight: 1.2, letterSpacing: '-0.02em', color: '#373942', margin: '0 0 28px' }}>The studio</h2>
+            <h2 style={{ fontFamily: '"Roboto Slab", serif', fontWeight: 700, fontSize: 32, lineHeight: 1.2, letterSpacing: '-0.02em', color: '#373942', margin: '0 0 28px' }}>Nevada County's film crew.</h2>
             <p style={{ fontFamily: '"Open Sans", sans-serif', fontSize: 16, lineHeight: 1.85, color: '#6B6B6E', margin: '0 0 20px' }}>
               Kit Kohler founded Riparian Studios in Nevada City after nearly a decade making ads for national brand campaigns in San Francisco. The move was deliberate: toward clients whose work matters to this specific place, and away from distance-produced content that never quite lands.
             </p>
