@@ -81,7 +81,7 @@ export default async function HomePage() {
       )}
 
       {/* About teaser */}
-      <section style={{ background: '#F4EFE6', padding: '100px 48px' }}>
+      <section style={{ background: '#fff', padding: '100px 48px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }}>
           <div>
             <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#6B6B6E', marginBottom: 14 }}>The studio</div>

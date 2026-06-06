@@ -21,17 +21,17 @@ export default function Reviews({ data }: { data: PlaceReviewsResult }) {
   if (!featured.length) return null;
 
   return (
-    <section style={{ background: '#F4EFE6', padding: '88px 48px' }}>
+    <section style={{ background: '#1A1408', padding: '88px 48px' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <div style={{ display: 'flex', alignItems: 'baseline', gap: 24, marginBottom: 56 }}>
-          <h2 style={{ fontFamily: '"Roboto Slab", serif', fontWeight: 700, fontSize: 'clamp(28px, 3.5vw, 42px)', letterSpacing: '-0.02em', color: '#1A1408', margin: 0 }}>
+          <h2 style={{ fontFamily: '"Roboto Slab", serif', fontWeight: 700, fontSize: 'clamp(28px, 3.5vw, 42px)', letterSpacing: '-0.02em', color: '#E2DFD9', margin: 0 }}>
             What clients say
           </h2>
           <a
             href="https://www.google.com/maps/place/Riparian+Studios/@39.2592359,-121.0172489,16z"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ fontFamily: "'DM Mono', monospace", fontSize: 10.5, letterSpacing: '0.13em', textTransform: 'uppercase', color: 'var(--rs-teal)', textDecoration: 'none', whiteSpace: 'nowrap' }}
+            style={{ fontFamily: "'DM Mono', monospace", fontSize: 10.5, letterSpacing: '0.13em', textTransform: 'uppercase', color: 'var(--rs-accent)', textDecoration: 'none', whiteSpace: 'nowrap' }}
           >
             {data.rating} stars · {data.totalReviews} reviews on Google ↗
           </a>
@@ -39,19 +39,19 @@ export default function Reviews({ data }: { data: PlaceReviewsResult }) {
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 32 }}>
           {featured.map((review, i) => (
-            <div key={i} style={{ background: '#fff', borderRadius: 4, padding: '32px', display: 'flex', flexDirection: 'column' }}>
+            <div key={i} style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 4, padding: '32px', display: 'flex', flexDirection: 'column' }}>
               <Stars rating={review.rating} />
-              <p style={{ fontFamily: '"Open Sans", sans-serif', fontSize: 15, lineHeight: 1.8, color: '#373942', margin: '0 0 16px', flex: 1, display: '-webkit-box', WebkitLineClamp: 4, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+              <p style={{ fontFamily: '"Open Sans", sans-serif', fontSize: 15, lineHeight: 1.8, color: 'rgba(226,223,217,0.8)', margin: '0 0 16px', flex: 1, display: '-webkit-box', WebkitLineClamp: 4, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
                 "{review.text}"
               </p>
               {review.googleMapsUri && (
-                <a href={review.googleMapsUri} target="_blank" rel="noopener noreferrer" style={{ fontFamily: "'DM Mono', monospace", fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--rs-teal)', textDecoration: 'none', display: 'inline-block', marginBottom: 20 }}>
+                <a href={review.googleMapsUri} target="_blank" rel="noopener noreferrer" style={{ fontFamily: "'DM Mono', monospace", fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--rs-accent)', textDecoration: 'none', display: 'inline-block', marginBottom: 20 }}>
                   Read on Google ↗
                 </a>
               )}
               <div>
-                <div style={{ fontFamily: '"Roboto Slab", serif', fontWeight: 700, fontSize: 13, color: '#1A1408' }}>{review.author}</div>
-                <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 10, letterSpacing: '0.1em', color: '#6B6B6E', textTransform: 'uppercase', marginTop: 2 }}>{review.relativeTime}</div>
+                <div style={{ fontFamily: '"Roboto Slab", serif', fontWeight: 700, fontSize: 13, color: '#E2DFD9' }}>{review.author}</div>
+                <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 10, letterSpacing: '0.1em', color: 'rgba(226,223,217,0.4)', textTransform: 'uppercase', marginTop: 2 }}>{review.relativeTime}</div>
               </div>
             </div>
           ))}
