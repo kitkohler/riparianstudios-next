@@ -27,7 +27,7 @@ export default function ContactPage() {
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 96, alignItems: 'start' }}>
           <div>
             <p style={{ fontFamily: '"Open Sans", sans-serif', fontSize: 16, lineHeight: 1.85, color: '#6B6B6E', margin: '0 0 48px' }}>
-              For video production inquiries, collaborations, field production, and anything else. We work with nonprofits, health systems, public agencies, and businesses across Nevada County and Northern California. Riparian responds within one business day.
+              For video production inquiries, collaborations, field production, and anything else. We work with nonprofits, health systems, public agencies, and businesses across Nevada County and Northern California. We'll be in touch as soon as we can.
             </p>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>

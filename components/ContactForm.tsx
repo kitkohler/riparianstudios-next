@@ -63,7 +63,7 @@ export default function ContactForm() {
           Message sent.
         </div>
         <p style={{ fontFamily: '"Open Sans", sans-serif', fontSize: 15, lineHeight: 1.8, color: '#6B6B6E', margin: 0 }}>
-          Thanks for reaching out. We'll be in touch within one business day.
+          Thanks for reaching out. We'll be in touch as soon as we can.
         </p>
       </div>
     );
