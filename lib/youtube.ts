@@ -13,13 +13,18 @@ export interface YTVideo {
 }
 
 export async function getPlaylistVideos(): Promise<YTVideo[]> {
+  if (!YT_API_KEY) return [];
   const items: YTVideo[] = [];
   let pageToken = '';
 
+  try {
   do {
     const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${YT_PLAYLIST_ID}&maxResults=50&key=${YT_API_KEY}${pageToken ? '&pageToken=' + pageToken : ''}`;
     const res = await fetch(url, { next: { revalidate: 3600 } }); // re-fetch hourly
-    if (!res.ok) throw new Error(`YouTube API error ${res.status}`);
+    if (!res.ok) {
+      console.error(`YouTube API error ${res.status}`);
+      return items;
+    }
     const data = await res.json();
 
     for (const item of data.items) {
@@ -41,6 +46,9 @@ export async function getPlaylistVideos(): Promise<YTVideo[]> {
 
     pageToken = data.nextPageToken || '';
   } while (pageToken);
+  } catch (err) {
+    console.error('YouTube fetch failed:', err);
+  }
 
   return items;
 }
