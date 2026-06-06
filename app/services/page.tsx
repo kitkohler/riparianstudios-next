@@ -28,10 +28,10 @@ const PROCESS = [
 ];
 
 const ADDONS = [
-  { name: 'Custom score', desc: 'Original music composition tailored to the film.' },
+  { name: 'Custom film score', desc: 'Original music composition written specifically for your film.' },
   { name: 'Motion graphics & animation', desc: 'Complex animation work including data visualization, kinetic typography, and custom animated sequences.' },
-  { name: 'Social and short-form cuts', desc: 'Additional edits optimized for Instagram, YouTube, and other platforms.' },
-  { name: 'Broadcast and event formats', desc: 'Delivery in any format your venue or network requires.' },
+  { name: 'Social media video', desc: 'Additional cuts optimized for Instagram, YouTube, LinkedIn, and other platforms.' },
+  { name: 'DCP & cinema delivery', desc: 'Digital Cinema Package (DCP) creation and delivery for theatrical screenings, film festivals, and live events.' },
 ];
 
 export default function ServicesPage() {
