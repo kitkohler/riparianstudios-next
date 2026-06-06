@@ -23,7 +23,7 @@ const PROCESS = [
     phase: 'Post-Production',
     tagline: 'From raw footage to finished film.',
     body: "We transcribe everything, build a rough assembly of the interviews for your review, then layer in b-roll, music, and graphics through to a polished final cut. You'll have clear review points along the way.",
-    includes: ['Transcription', 'Rough assembly and client review', 'Full picture and sound edit', 'Stock music licensing', 'Simple animations', 'Color, mix, and final delivery'],
+    includes: ['Transcription', 'Full picture and sound edit', 'Stock music licensing', 'Simple animations', 'Color, mix, and final delivery'],
   },
 ];
 
