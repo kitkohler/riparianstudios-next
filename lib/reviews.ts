@@ -3,6 +3,7 @@ export interface GoogleReview {
   rating: number;
   text: string;
   relativeTime: string;
+  googleMapsUri?: string;
   photoUri?: string;
 }
 
@@ -34,6 +35,7 @@ export async function getPlaceReviews(): Promise<PlaceReviewsResult | null> {
         rating: r.rating ?? 5,
         text: r.text?.text ?? '',
         relativeTime: r.relativePublishTimeDescription ?? '',
+        googleMapsUri: r.googleMapsUri,
         photoUri: r.authorAttribution?.photoUri,
       })),
     };

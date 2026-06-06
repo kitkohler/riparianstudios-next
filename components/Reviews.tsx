@@ -41,9 +41,14 @@ export default function Reviews({ data }: { data: PlaceReviewsResult }) {
           {featured.map((review, i) => (
             <div key={i} style={{ background: '#fff', borderRadius: 4, padding: '32px', display: 'flex', flexDirection: 'column' }}>
               <Stars rating={review.rating} />
-              <p style={{ fontFamily: '"Open Sans", sans-serif', fontSize: 15, lineHeight: 1.8, color: '#373942', margin: '0 0 24px', flex: 1 }}>
+              <p style={{ fontFamily: '"Open Sans", sans-serif', fontSize: 15, lineHeight: 1.8, color: '#373942', margin: '0 0 16px', flex: 1, display: '-webkit-box', WebkitLineClamp: 4, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
                 "{review.text}"
               </p>
+              {review.googleMapsUri && (
+                <a href={review.googleMapsUri} target="_blank" rel="noopener noreferrer" style={{ fontFamily: "'DM Mono', monospace", fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--rs-teal)', textDecoration: 'none', display: 'inline-block', marginBottom: 20 }}>
+                  Read on Google ↗
+                </a>
+              )}
               <div>
                 <div style={{ fontFamily: '"Roboto Slab", serif', fontWeight: 700, fontSize: 13, color: '#1A1408' }}>{review.author}</div>
                 <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 10, letterSpacing: '0.1em', color: '#6B6B6E', textTransform: 'uppercase', marginTop: 2 }}>{review.relativeTime}</div>
