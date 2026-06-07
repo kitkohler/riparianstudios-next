@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { JOURNAL_POSTS } from '@/lib/journal-posts';
+import FadeUp from '@/components/FadeUp';
 
 export const metadata: Metadata = {
   title: 'Field Notes — Video Production Journal | Riparian Studios',
@@ -19,10 +20,14 @@ export default function JournalPage() {
     <div style={{ background: '#fff' }}>
       <div style={{ background: '#1A1408', padding: '88px 48px 72px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(244,239,230,0.4)', marginBottom: 14 }}>From the studio</div>
-          <h1 style={{ fontFamily: '"Roboto Slab", serif', fontWeight: 700, fontSize: 'clamp(40px, 5vw, 64px)', lineHeight: 1.05, letterSpacing: '-0.025em', color: '#E2DFD9', margin: 0 }}>
-            Field notes.
-          </h1>
+          <FadeUp delay={0.1}>
+            <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(244,239,230,0.4)', marginBottom: 14 }}>From the studio</div>
+          </FadeUp>
+          <FadeUp delay={0.25}>
+            <h1 style={{ fontFamily: '"Roboto Slab", serif', fontWeight: 700, fontSize: 'clamp(40px, 5vw, 64px)', lineHeight: 1.05, letterSpacing: '-0.025em', color: '#E2DFD9', margin: 0 }}>
+              Field notes.
+            </h1>
+          </FadeUp>
         </div>
       </div>
 
@@ -30,7 +35,8 @@ export default function JournalPage() {
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
             {posts.map((post, i) => (
-              <Link key={post.slug} href={`/journal/${post.slug}`} style={{ textDecoration: 'none', display: 'block', padding: '40px 0', borderTop: '1px solid rgba(55,57,66,0.1)', borderBottom: i === posts.length - 1 ? '1px solid rgba(55,57,66,0.1)' : 'none' }}>
+              <FadeUp key={post.slug} delay={Math.min(i * 0.04, 0.3)}>
+              <Link href={`/journal/${post.slug}`} style={{ textDecoration: 'none', display: 'block', padding: '40px 0', borderTop: '1px solid rgba(55,57,66,0.1)', borderBottom: i === posts.length - 1 ? '1px solid rgba(55,57,66,0.1)' : 'none' }}>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 48, alignItems: 'start' }}>
                   <div>
                     <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 10.5, letterSpacing: '0.13em', textTransform: 'uppercase', color: 'var(--rs-accent)', marginBottom: 8 }}>{post.category}</div>
@@ -42,6 +48,7 @@ export default function JournalPage() {
                   </div>
                 </div>
               </Link>
+              </FadeUp>
             ))}
           </div>
         </div>

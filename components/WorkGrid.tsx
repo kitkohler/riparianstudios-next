@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
 import type { YTVideo } from '@/lib/youtube';
 
@@ -56,7 +57,6 @@ function VideoCard({ video, large }: { video: YTVideo; large?: boolean }) {
           boxShadow: hovered ? '0 8px 32px rgba(26,20,8,0.14)' : '0 1px 3px rgba(26,20,8,0.06), 0 4px 16px rgba(26,20,8,0.05)',
           transform: hovered ? 'translateY(-3px)' : 'none',
           transition: 'box-shadow 0.25s, transform 0.25s',
-          gridColumn: large ? 'span 2' : 'span 1',
         }}
       >
         <div style={{ overflow: 'hidden', aspectRatio: large ? '21/9' : '16/10', position: 'relative' }}>
@@ -86,10 +86,21 @@ function VideoCard({ video, large }: { video: YTVideo; large?: boolean }) {
 }
 
 export default function WorkGrid({ videos }: { videos: YTVideo[] }) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: '-60px 0px' });
+
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+    <div ref={ref} style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
       {videos.map((v, i) => (
-        <VideoCard key={v.videoId} video={v} large={i === 0} />
+        <motion.div
+          key={v.videoId}
+          initial={{ opacity: 0, y: 24 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: Math.min(i * 0.06, 0.4) }}
+          style={{ gridColumn: i === 0 ? 'span 2' : 'span 1' }}
+        >
+          <VideoCard video={v} large={i === 0} />
+        </motion.div>
       ))}
     </div>
   );
