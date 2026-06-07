@@ -1,4 +1,5 @@
 import type { PlaceReviewsResult } from '@/lib/reviews';
+import FadeUp from '@/components/FadeUp';
 
 function Stars({ rating }: { rating: number }) {
   return (
@@ -39,7 +40,8 @@ export default function Reviews({ data }: { data: PlaceReviewsResult }) {
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 32 }}>
           {featured.map((review, i) => (
-            <div key={i} style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 4, padding: '32px', display: 'flex', flexDirection: 'column' }}>
+            <FadeUp key={i} delay={i * 0.1}>
+            <div style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 4, padding: '32px', display: 'flex', flexDirection: 'column' }}>
               <Stars rating={review.rating} />
               <p style={{ fontFamily: '"Open Sans", sans-serif', fontSize: 15, lineHeight: 1.8, color: 'rgba(226,223,217,0.8)', margin: '0 0 16px', flex: 1, display: '-webkit-box', WebkitLineClamp: 4, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
                 "{review.text}"
@@ -54,6 +56,7 @@ export default function Reviews({ data }: { data: PlaceReviewsResult }) {
                 <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 10, letterSpacing: '0.1em', color: 'rgba(226,223,217,0.4)', textTransform: 'uppercase', marginTop: 2 }}>{review.relativeTime}</div>
               </div>
             </div>
+            </FadeUp>
           ))}
         </div>
       </div>

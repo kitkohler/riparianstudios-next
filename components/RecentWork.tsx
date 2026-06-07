@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { YTVideo } from '@/lib/youtube';
@@ -26,11 +28,18 @@ function VideoModal({ video, onClose }: { video: YTVideo; onClose: () => void })
 
 export default function RecentWork({ videos }: { videos: YTVideo[] }) {
   const [selected, setSelected] = useState<YTVideo | null>(null);
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: '-80px 0px' });
 
   return (
     <section style={{ background: '#fff', padding: '96px 48px' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 48 }}>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6,  }}
+          style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 48 }}
+        >
           <div>
             <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#6B6B6E', marginBottom: 14 }}>Selected work</div>
             <h2 style={{ fontFamily: '"Roboto Slab", serif', fontWeight: 700, fontSize: 36, lineHeight: 1.15, letterSpacing: '-0.02em', color: '#373942', margin: 0 }}>Recent projects</h2>
@@ -38,11 +47,18 @@ export default function RecentWork({ videos }: { videos: YTVideo[] }) {
           <Link href="/work" style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#6B6B6E', textDecoration: 'none' }}>
             View all →
           </Link>
-        </div>
+        </motion.div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
-          {videos.map(v => (
-            <div key={v.videoId} onClick={() => setSelected(v)} style={{ cursor: 'pointer', borderRadius: 4, overflow: 'hidden', boxShadow: '0 1px 3px rgba(26,20,8,0.06), 0 4px 16px rgba(26,20,8,0.05)' }}>
+        <div ref={ref} style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+          {videos.map((v, i) => (
+            <motion.div
+              key={v.videoId}
+              initial={{ opacity: 0, y: 28 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: i * 0.1,  }}
+              onClick={() => setSelected(v)}
+              style={{ cursor: 'pointer', borderRadius: 4, overflow: 'hidden', boxShadow: '0 1px 3px rgba(26,20,8,0.06), 0 4px 16px rgba(26,20,8,0.05)' }}
+            >
               <div style={{ overflow: 'hidden', aspectRatio: '16/10', position: 'relative' }}>
                 <Image src={v.thumbnail || `https://i.ytimg.com/vi/${v.videoId}/hqdefault.jpg`} alt={v.title} fill style={{ objectFit: 'cover' }} />
               </div>
@@ -51,7 +67,7 @@ export default function RecentWork({ videos }: { videos: YTVideo[] }) {
                 <div style={{ fontFamily: '"Roboto Slab", serif', fontWeight: 700, fontSize: 18, lineHeight: 1.3, color: '#373942', marginBottom: 10 }}>{v.title}</div>
                 <div style={{ fontFamily: '"Open Sans", sans-serif', fontSize: 13.5, lineHeight: 1.65, color: '#6B6B6E', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{v.description}</div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
