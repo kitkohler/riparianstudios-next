@@ -52,8 +52,43 @@ export default async function HomePage() {
                 </Link>
               </div>
             </FadeUp>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 28 }}>
-              {recentPosts.map((post, i) => (
+
+            {/* Featured post — large treatment for the top entry */}
+            {(() => {
+              const featured = recentPosts[0];
+              const thumbnail = featured.videoId
+                ? `https://i.ytimg.com/vi/${featured.videoId}/maxresdefault.jpg`
+                : null;
+              return (
+                <FadeUp>
+                  <Link href={`/journal/${featured.slug}`} style={{ textDecoration: 'none', display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: 56, alignItems: 'center', marginBottom: 64 }}>
+                    <div style={{ overflow: 'hidden', borderRadius: 4, aspectRatio: '16/9', background: '#1A1408' }}>
+                      {thumbnail && (
+                        <Image
+                          src={thumbnail}
+                          alt={featured.title}
+                          width={720}
+                          height={405}
+                          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                        />
+                      )}
+                    </div>
+                    <div>
+                      <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 10.5, letterSpacing: '0.13em', textTransform: 'uppercase', color: 'var(--rs-accent)', marginBottom: 14 }}>
+                        {featured.category} · {featured.date}
+                      </div>
+                      <h3 style={{ fontFamily: '"Roboto Slab", serif', fontWeight: 700, fontSize: 26, lineHeight: 1.2, letterSpacing: '-0.01em', color: '#373942', margin: '0 0 16px' }}>{featured.title}</h3>
+                      <p style={{ fontFamily: '"Open Sans", sans-serif', fontSize: 15.5, lineHeight: 1.75, color: '#6B6B6E', margin: '0 0 24px' }}>{featured.excerpt}</p>
+                      <span style={{ fontFamily: '"Open Sans", sans-serif', fontSize: 14, fontWeight: 600, color: 'var(--rs-teal)' }}>Read the story →</span>
+                    </div>
+                  </Link>
+                </FadeUp>
+              );
+            })()}
+
+            {/* Remaining posts — smaller card row */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 28 }}>
+              {recentPosts.slice(1).map((post, i) => (
                 <FadeUp key={post.slug} delay={i * 0.08}>
                   <Link href={`/journal/${post.slug}`} style={{ textDecoration: 'none', display: 'block', paddingTop: 24, borderTop: '1px solid rgba(55,57,66,0.15)' }}>
                     <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--rs-accent)', marginBottom: 10 }}>{post.category}</div>
