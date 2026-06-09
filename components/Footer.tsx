@@ -11,9 +11,9 @@ const STUDIO_LINKS = [
 
 export default function Footer() {
   return (
-    <footer style={{ background: '#1A1408', padding: '72px 48px 40px' }}>
+    <footer className="rs-footer" style={{ background: '#1A1408', padding: '72px 48px 40px' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '2.2fr 1fr 1fr 1fr', gap: 56, marginBottom: 56 }}>
+        <div className="rs-footer-grid" style={{ marginBottom: 56 }}>
 
           <div>
             <Link href="/" style={{ display: 'block', marginBottom: 20 }}>

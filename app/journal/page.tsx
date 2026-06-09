@@ -18,7 +18,7 @@ export default function JournalPage() {
 
   return (
     <div style={{ background: '#fff' }}>
-      <div style={{ background: '#1A1408', padding: '88px 48px 72px' }}>
+      <div className="rs-page-hero" style={{ background: '#1A1408', padding: '88px 48px 72px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <FadeUp delay={0.1}>
             <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(244,239,230,0.4)', marginBottom: 14 }}>From the studio</div>
@@ -31,13 +31,13 @@ export default function JournalPage() {
         </div>
       </div>
 
-      <section style={{ padding: '72px 48px 96px' }}>
+      <section className="rs-section">
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
             {posts.map((post, i) => (
               <FadeUp key={post.slug} delay={Math.min(i * 0.04, 0.3)}>
               <Link href={`/journal/${post.slug}`} style={{ textDecoration: 'none', display: 'block', padding: '40px 0', borderTop: '1px solid rgba(55,57,66,0.1)', borderBottom: i === posts.length - 1 ? '1px solid rgba(55,57,66,0.1)' : 'none' }}>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 48, alignItems: 'start' }}>
+                <div className="rs-grid-process" style={{ gap: 48, alignItems: 'start' }}>
                   <div>
                     <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 10.5, letterSpacing: '0.13em', textTransform: 'uppercase', color: 'var(--rs-accent)', marginBottom: 8 }}>{post.category}</div>
                     <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 10.5, letterSpacing: '0.1em', color: 'rgba(107,107,110,0.6)' }}>{post.date}</div>

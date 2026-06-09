@@ -48,7 +48,7 @@ export default function AboutPage() {
   return (
     <div style={{ background: '#fff' }}>
       {/* Hero */}
-      <div style={{ background: '#1A1408', padding: '88px 48px 80px' }}>
+      <div className="rs-page-hero" style={{ background: '#1A1408', padding: '88px 48px 80px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <FadeUp delay={0.1}>
             <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(244,239,230,0.4)', marginBottom: 14 }}>About the studio</div>
@@ -62,8 +62,8 @@ export default function AboutPage() {
       </div>
 
       {/* Bio */}
-      <section style={{ padding: '96px 48px' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'start' }}>
+      <section className="rs-section">
+        <div className="rs-grid-2" style={{ maxWidth: 1200, margin: '0 auto', gap: 80, alignItems: 'start' }}>
           <FadeUp>
             <div>
               <Image
@@ -108,7 +108,7 @@ export default function AboutPage() {
       </section>
 
       {/* Crew */}
-      <section style={{ padding: '88px 48px', borderTop: '1px solid rgba(55,57,66,0.08)' }}>
+      <section className="rs-section" style={{ borderTop: '1px solid rgba(55,57,66,0.08)' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <FadeUp>
             <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#6B6B6E', marginBottom: 14 }}>Sierra Foothills production crew</div>
@@ -121,7 +121,7 @@ export default function AboutPage() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: 64 }}>
             {CREW.map((person, i) => (
               <FadeUp key={person.name} delay={i * 0.08}>
-                <div style={{ display: 'grid', gridTemplateColumns: '280px 1fr', gap: 48, alignItems: 'start' }}>
+                <div className="rs-crew-card" style={{ display: 'grid', gridTemplateColumns: '280px 1fr', gap: 48, alignItems: 'start' }}>
                   <Image
                     src={person.photo}
                     alt={person.name}
@@ -142,13 +142,13 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section style={{ background: '#F4EFE6', padding: '88px 48px' }}>
+      <section className="rs-section" style={{ background: '#F4EFE6' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <FadeUp>
             <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#6B6B6E', marginBottom: 14 }}>Approach</div>
             <h2 style={{ fontFamily: '"Roboto Slab", serif', fontWeight: 700, fontSize: 34, lineHeight: 1.15, letterSpacing: '-0.02em', color: '#373942', margin: '14px 0 56px' }}>How the work gets made</h2>
           </FadeUp>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 32 }}>
+          <div className="rs-grid-4" style={{ gap: 32 }}>
             {VALUES.map((v, i) => (
               <FadeUp key={v.name} delay={i * 0.08}>
                 <div>

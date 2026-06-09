@@ -22,7 +22,7 @@ export default function JournalPostPage({ params }: { params: { slug: string } }
 
   return (
     <div style={{ background: '#fff' }}>
-      <div style={{ background: '#1A1408', padding: '88px 48px 72px' }}>
+      <div className="rs-page-hero" style={{ background: '#1A1408', padding: '88px 48px 72px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <Link href="/journal" style={{ fontFamily: "'DM Mono', monospace", fontSize: 10.5, letterSpacing: '0.13em', textTransform: 'uppercase', color: 'rgba(244,239,230,0.4)', textDecoration: 'none', display: 'inline-block', marginBottom: 24 }}>
             ← Field notes
@@ -58,7 +58,7 @@ export default function JournalPostPage({ params }: { params: { slug: string } }
 
       {/* Premiere CTA strip */}
       {post.eventbriteUrl && (
-        <div style={{ background: '#F4EFE6', padding: '56px 48px' }}>
+        <div className="rs-premiere-cta" style={{ background: '#F4EFE6', padding: '56px 48px' }}>
           <div style={{ maxWidth: 880, margin: '0 auto', textAlign: 'center' }}>
             <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 10.5, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--rs-accent)', marginBottom: 14 }}>Premiere</div>
             {post.premiereDate && <div style={{ fontFamily: '"Roboto Slab", serif', fontWeight: 700, fontSize: 24, lineHeight: 1.25, color: '#373942', margin: '0 0 6px' }}>{post.premiereDate}</div>}
@@ -71,7 +71,7 @@ export default function JournalPostPage({ params }: { params: { slug: string } }
         </div>
       )}
 
-      <section style={{ padding: '72px 48px 96px' }}>
+      <section className="rs-post-body" style={{ padding: '72px 48px 96px' }}>
         <div style={{ maxWidth: 680, margin: '0 auto' }}>
           {post.body.split('\n\n').filter(Boolean).map((para, i) => {
             const trimmed = para.trim();

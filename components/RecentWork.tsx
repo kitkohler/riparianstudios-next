@@ -32,7 +32,7 @@ export default function RecentWork({ videos }: { videos: YTVideo[] }) {
   const inView = useInView(ref, { once: true, margin: '-80px 0px' });
 
   return (
-    <section style={{ background: '#fff', padding: '96px 48px' }}>
+    <section className="rs-section" style={{ background: '#fff' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -49,7 +49,7 @@ export default function RecentWork({ videos }: { videos: YTVideo[] }) {
           </Link>
         </motion.div>
 
-        <div ref={ref} style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+        <div ref={ref} className="rs-grid-3" style={{ gap: 24 }}>
           {videos.map((v, i) => (
             <motion.div
               key={v.videoId}

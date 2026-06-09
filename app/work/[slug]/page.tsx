@@ -23,7 +23,7 @@ export default function WorkPostPage({ params }: { params: { slug: string } }) {
   return (
     <div style={{ background: '#fff' }}>
       {/* Header */}
-      <div style={{ background: '#1A1408', padding: '88px 48px 72px' }}>
+      <div className="rs-page-hero" style={{ background: '#1A1408', padding: '88px 48px 72px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <Link href="/work" style={{ fontFamily: "'DM Mono', monospace", fontSize: 10.5, letterSpacing: '0.13em', textTransform: 'uppercase', color: 'rgba(244,239,230,0.4)', textDecoration: 'none', display: 'inline-block', marginBottom: 24 }}>
             ← All work

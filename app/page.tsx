@@ -24,11 +24,11 @@ export default async function HomePage() {
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(10,8,4,0.55) 0%, rgba(10,8,4,0.2) 40%, rgba(10,8,4,0.65) 100%)' }} />
         <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: 2, background: 'linear-gradient(to bottom, transparent, var(--rs-accent) 20%, var(--rs-accent) 80%, transparent)' }} />
 
-        <div style={{ position: 'relative', flex: 1, display: 'flex', alignItems: 'flex-end', maxWidth: 1200, width: '100%', margin: '0 auto', padding: '0 48px 80px' }}>
+        <div className="rs-hero-content" style={{ position: 'relative', flex: 1, display: 'flex', alignItems: 'flex-end', maxWidth: 1200, width: '100%', margin: '0 auto' }}>
           <HeroText />
         </div>
 
-        <div style={{ position: 'absolute', bottom: 28, right: 48, fontFamily: "'DM Mono', monospace", fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(244,239,230,0.3)', display: 'flex', alignItems: 'center', gap: 8 }}>
+        <div className="rs-scroll-hint" style={{ position: 'absolute', bottom: 28, right: 48, fontFamily: "'DM Mono', monospace", fontSize: 10, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(244,239,230,0.3)', display: 'flex', alignItems: 'center', gap: 8 }}>
           <span>Scroll</span>
           <span style={{ display: 'block', width: 24, height: 1, background: 'rgba(244,239,230,0.25)' }} />
         </div>
@@ -39,7 +39,7 @@ export default async function HomePage() {
 
       {/* Field Notes strip */}
       {recentPosts.length > 0 && (
-        <section style={{ background: '#F4EFE6', padding: '88px 48px' }}>
+        <section className="rs-section" style={{ background: '#F4EFE6' }}>
           <div style={{ maxWidth: 1200, margin: '0 auto' }}>
             <FadeUp>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 48 }}>
@@ -61,7 +61,7 @@ export default async function HomePage() {
                 : null;
               return (
                 <FadeUp>
-                  <Link href={`/journal/${featured.slug}`} style={{ textDecoration: 'none', display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: 56, alignItems: 'center', marginBottom: 64 }}>
+                  <Link href={`/journal/${featured.slug}`} className="rs-field-notes-featured" style={{ textDecoration: 'none', display: 'grid', marginBottom: 64 }}>
                     <div style={{ overflow: 'hidden', borderRadius: 4, aspectRatio: '16/9', background: '#1A1408' }}>
                       {thumbnail && (
                         <Image
@@ -87,7 +87,7 @@ export default async function HomePage() {
             })()}
 
             {/* Remaining posts — smaller card row */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 28 }}>
+            <div className="rs-grid-3 rs-field-notes-grid" style={{ gap: 28 }}>
               {recentPosts.slice(1).map((post, i) => (
                 <FadeUp key={post.slug} delay={i * 0.08}>
                   <Link href={`/journal/${post.slug}`} style={{ textDecoration: 'none', display: 'block', paddingTop: 24, borderTop: '1px solid rgba(55,57,66,0.15)' }}>
@@ -104,8 +104,8 @@ export default async function HomePage() {
       )}
 
       {/* About teaser */}
-      <section style={{ background: '#fff', padding: '100px 48px' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }}>
+      <section className="rs-section" style={{ background: '#fff' }}>
+        <div className="rs-grid-2" style={{ maxWidth: 1200, margin: '0 auto', gap: 80, alignItems: 'center' }}>
           <FadeUp>
             <div>
               <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#6B6B6E', marginBottom: 14 }}>The studio</div>
@@ -133,7 +133,7 @@ export default async function HomePage() {
                 height={525}
                 style={{ width: '100%', maxWidth: 420, height: 'auto', objectFit: 'cover', borderRadius: 4, display: 'block' }}
               />
-              <div style={{ position: 'absolute', bottom: -20, right: -20, background: '#fff', padding: '20px 24px', borderRadius: 3, boxShadow: '0 4px 24px rgba(26,20,8,0.1)' }}>
+              <div className="rs-quote-float" style={{ position: 'absolute', bottom: -20, right: -20, background: '#fff', padding: '20px 24px', borderRadius: 3, boxShadow: '0 4px 24px rgba(26,20,8,0.1)' }}>
                 <div style={{ fontFamily: '"Roboto Slab", serif', fontSize: 13, fontStyle: 'italic', color: 'var(--rs-accent)', marginBottom: 4 }}>"If I'm doing my job right, the story outshines us."</div>
                 <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#6B6B6E' }}>Kit Kohler, Founder</div>
               </div>
@@ -145,7 +145,7 @@ export default async function HomePage() {
       {reviewData && <Reviews data={reviewData} />}
 
       {/* CTA band */}
-      <section style={{ background: 'var(--rs-teal)', padding: '88px 48px', textAlign: 'center' }}>
+      <section className="rs-section" style={{ background: 'var(--rs-teal)', textAlign: 'center' }}>
         <div style={{ maxWidth: 600, margin: '0 auto' }}>
           <FadeUp>
             <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(244,239,230,0.45)', marginBottom: 24 }}>Taking on new projects</div>

@@ -63,11 +63,11 @@ export default function ServicesPage() {
       </div>
 
       {/* Process */}
-      <section style={{ padding: '88px 48px' }}>
+      <section className="rs-section">
         <div style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 80 }}>
           {PROCESS.map((step, i) => (
             <FadeUp key={step.phase} delay={i * 0.05}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 64, alignItems: 'start', paddingBottom: 80, borderBottom: i < PROCESS.length - 1 ? '1px solid rgba(55,57,66,0.08)' : 'none' }}>
+              <div className="rs-grid-process" style={{ gap: 64, alignItems: 'start', paddingBottom: 80, borderBottom: i < PROCESS.length - 1 ? '1px solid rgba(55,57,66,0.08)' : 'none' }}>
                 <div>
                   <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 10.5, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--rs-accent)', marginBottom: 12 }}>0{i + 1}</div>
                   <h2 style={{ fontFamily: '"Roboto Slab", serif', fontWeight: 700, fontSize: 32, lineHeight: 1.1, letterSpacing: '-0.02em', color: '#373942', margin: '0 0 12px' }}>{step.phase}</h2>
@@ -94,13 +94,13 @@ export default function ServicesPage() {
       </section>
 
       {/* Add-ons */}
-      <section style={{ background: '#F4EFE6', padding: '88px 48px' }}>
+      <section className="rs-section" style={{ background: '#F4EFE6' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <FadeUp>
             <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#6B6B6E', marginBottom: 14 }}>Optional</div>
             <h2 style={{ fontFamily: '"Roboto Slab", serif', fontWeight: 700, fontSize: 34, lineHeight: 1.15, letterSpacing: '-0.02em', color: '#373942', margin: '14px 0 48px' }}>When the project calls for more</h2>
           </FadeUp>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 32 }}>
+          <div className="rs-grid-4" style={{ gap: 32 }}>
             {ADDONS.map((a, i) => (
               <FadeUp key={a.name} delay={i * 0.08}>
                 <div>
@@ -115,7 +115,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section style={{ padding: '88px 48px', textAlign: 'center' }}>
+      <section className="rs-section" style={{ textAlign: 'center' }}>
         <FadeUp>
           <div style={{ maxWidth: 560, margin: '0 auto' }}>
             <h2 style={{ fontFamily: '"Roboto Slab", serif', fontWeight: 700, fontSize: 36, lineHeight: 1.15, color: '#373942', margin: '0 0 20px' }}>Want to talk through your project?</h2>

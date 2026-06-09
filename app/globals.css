@@ -41,3 +41,131 @@ body {
   background: #fff;
   -webkit-font-smoothing: antialiased;
 }
+
+/* ── MOBILE RESPONSIVE ─────────────────────────────────────── */
+
+/* ── Header ── */
+.rs-header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.rs-nav { display: flex; align-items: center; gap: 32px; }
+.rs-nav-cta { display: inline-block; }
+.rs-hamburger { display: none; }
+.rs-mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  top: 68px;
+  background: rgba(26,20,12,0.98);
+  backdrop-filter: blur(12px);
+  z-index: 99;
+  flex-direction: column;
+  padding: 40px 32px;
+  gap: 0;
+}
+.rs-mobile-menu.open { display: flex; }
+.rs-mobile-menu a {
+  font-family: 'Roboto Slab', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: rgba(244,239,230,0.85);
+  text-decoration: none;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  letter-spacing: -0.01em;
+}
+.rs-mobile-menu a:last-child { border-bottom: none; }
+
+/* ── Section padding ── */
+.rs-section { padding: 88px 48px; }
+.rs-hero-content { padding: 0 48px 80px; }
+
+/* ── 2-col grids → stack ── */
+.rs-grid-2 { display: grid; grid-template-columns: 1fr 1fr; }
+.rs-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); }
+.rs-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); }
+.rs-grid-process { display: grid; grid-template-columns: 1fr 2fr; }
+.rs-footer-grid { display: grid; grid-template-columns: 2.2fr 1fr 1fr 1fr; gap: 56px; }
+.rs-field-notes-featured { display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: center; }
+
+@media (max-width: 768px) {
+  /* Footer */
+  .rs-footer { padding: 48px 20px 32px !important; }
+
+  /* Page hero dark bands */
+  .rs-page-hero { padding: 56px 20px 48px !important; }
+  .rs-page-hero > div { padding: 0 !important; }
+
+  /* Journal post body */
+  .rs-post-body { padding: 48px 20px 72px !important; }
+
+  /* Premiere CTA */
+  .rs-premiere-cta { padding: 40px 20px !important; }
+
+  /* Header */
+  .rs-header-inner { padding: 0 20px; }
+  .rs-nav { display: none; }
+  .rs-nav-cta { display: none; }
+  .rs-hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    gap: 4px;
+    flex-direction: column;
+  }
+  .rs-hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 2px;
+    transition: opacity 0.2s;
+  }
+
+  /* Sections */
+  .rs-section { padding: 60px 20px; }
+  .rs-hero-content { padding: 0 20px 56px; }
+
+  /* Grids */
+  .rs-grid-2 { grid-template-columns: 1fr; gap: 40px !important; }
+  .rs-grid-3 { grid-template-columns: 1fr; gap: 24px !important; }
+  .rs-grid-4 { grid-template-columns: 1fr; gap: 24px !important; }
+  .rs-grid-process { grid-template-columns: 1fr; gap: 24px !important; }
+  .rs-field-notes-featured { grid-template-columns: 1fr; gap: 28px !important; }
+
+  /* Footer */
+  .rs-footer-grid { grid-template-columns: 1fr 1fr; gap: 40px !important; }
+
+  /* Crew: photo narrower on mobile */
+  .rs-crew-card { grid-template-columns: 120px 1fr !important; gap: 24px !important; }
+
+  /* Reviews: already uses auto-fit/minmax so it's fine */
+
+  /* Field notes smaller cards: 2-col on mobile instead of 3 */
+  .rs-grid-3.rs-field-notes-grid { grid-template-columns: 1fr 1fr; gap: 20px !important; }
+
+  /* Work grid: 1 col on mobile */
+  .rs-work-grid { grid-template-columns: 1fr !important; }
+
+  /* Scroll hint: hide on mobile */
+  .rs-scroll-hint { display: none; }
+
+  /* Quote float card: pull back in on mobile */
+  .rs-quote-float { display: none; }
+}
+
+@media (max-width: 480px) {
+  /* Field notes: 1-col on very small screens */
+  .rs-grid-3.rs-field-notes-grid { grid-template-columns: 1fr; }
+  .rs-footer-grid { grid-template-columns: 1fr; gap: 32px !important; }
+}

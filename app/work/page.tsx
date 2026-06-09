@@ -18,7 +18,7 @@ export default async function WorkPage() {
 
   return (
     <div style={{ background: '#fff', minHeight: '100vh' }}>
-      <div style={{ background: '#1A1408', padding: '88px 48px 72px' }}>
+      <div className="rs-page-hero" style={{ background: '#1A1408', padding: '88px 48px 72px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <FadeUp delay={0.1}>
             <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 11, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(244,239,230,0.4)', marginBottom: 14 }}>Video production, Nevada City CA</div>
@@ -31,7 +31,7 @@ export default async function WorkPage() {
         </div>
       </div>
 
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '56px 48px 96px' }}>
+      <div className="rs-section" style={{ maxWidth: 1200, margin: '0 auto' }}>
         <div style={{ marginBottom: 32, fontFamily: "'DM Mono', monospace", fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(107,107,110,0.5)' }}>
           {videos.length} film{videos.length !== 1 ? 's' : ''}
         </div>

@@ -22,7 +22,7 @@ export default function Reviews({ data }: { data: PlaceReviewsResult }) {
   if (!featured.length) return null;
 
   return (
-    <section style={{ background: '#1A1408', padding: '88px 48px' }}>
+    <section className="rs-section" style={{ background: '#1A1408' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <div style={{ display: 'flex', alignItems: 'baseline', gap: 24, marginBottom: 56 }}>
           <h2 style={{ fontFamily: '"Roboto Slab", serif', fontWeight: 700, fontSize: 'clamp(28px, 3.5vw, 42px)', letterSpacing: '-0.02em', color: '#E2DFD9', margin: 0 }}>

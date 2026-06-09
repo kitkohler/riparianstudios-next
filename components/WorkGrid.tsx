@@ -90,7 +90,7 @@ export default function WorkGrid({ videos }: { videos: YTVideo[] }) {
   const inView = useInView(ref, { once: true, margin: '-60px 0px' });
 
   return (
-    <div ref={ref} style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+    <div ref={ref} className="rs-grid-3 rs-work-grid" style={{ gap: 24 }}>
       {videos.map((v, i) => (
         <motion.div
           key={v.videoId}
