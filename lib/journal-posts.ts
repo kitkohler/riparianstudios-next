@@ -8,9 +8,93 @@ export interface JournalPost {
   body: string;
   videoId?: string;
   needsVideo?: boolean;
+  // Optional premiere metadata
+  runtime?: string;
+  client?: string;
+  premiereDate?: string;
+  premiereLocation?: string;
+  eventbriteUrl?: string;
+  // Inline images: use [img:URL|caption] markers in body
 }
 
 export const JOURNAL_POSTS: JournalPost[] = [
+  {
+    slug: 'working-lands-iii',
+    title: 'Working Lands Volume III: The History of Forestry and Fire in Nevada County',
+    date: 'June 2026',
+    isoDate: '2026-06-09',
+    category: 'New Work',
+    videoId: 'uv9IkU9yiHA',
+    runtime: '50 minutes',
+    client: 'Nevada County Resource Conservation District',
+    premiereDate: 'Tuesday, June 30, 2026 · 5:00 PM',
+    premiereLocation: 'Don Baggett Theatre, Nevada Union High School · Grass Valley',
+    eventbriteUrl: 'https://www.eventbrite.com/e/working-lands-iii-the-history-of-forestry-and-fire-in-nevada-county-tickets-1990522987840?aff=oddtdtcreator',
+    excerpt: 'A 50-minute documentary for the Nevada County Resource Conservation District. Premiering June 30 at the Don Baggett Theatre in Grass Valley. Free admission.',
+    body: `Some projects arrive as commissions. Others arrive as challenges. Working Lands Volume III was, honestly, a little of both.
+
+The Working Lands series has been a fixture of Nevada County's cultural landscape since 2016, when the first installment aired on PBS and introduced viewers to twelve multigenerational farming and ranching families. Volume II followed in 2018. Both were well-regarded, well-distributed films. By the time the Nevada County Resource Conservation District came to us about a third chapter, the series had a reputation to honor and, in our view, a ceiling to break through.
+
+We wanted to make the best film in the series. That meant going further in every direction: deeper research, original music, custom animation, and a subject matter that has never been more urgent.
+
+**The Film**
+
+Volume III is a 50-minute documentary about the history of forestry and fire in Nevada County and California's Sierra Nevada. It covers more than a century of land use, policy decisions, and ecological consequence, tracing the arc from the logging heyday of the late 19th and early 20th centuries through the timber wars of the 1980s and 90s, the collapse of California's milling infrastructure, and the overcrowded, fire-prone forests we're managing today.
+
+[img:https://res.cloudinary.com/drpr93xmp/image/upload/q_auto/f_auto/v1781025559/WL-Still-04_qezepm.jpg|Early-1900s logging in the Sierra. A century of extractive logging combined with another century of fire suppression produced the overstocked, fuel-heavy forests that feed today's megafires.]
+
+The film asks a hard question: how did we get here, and what do we do about it?
+
+It doesn't offer easy answers. But it does offer a clear-eyed look at the tools, the science, the economics, and the people who are actively working on solutions, from prescribed fire advocates to biomass energy developers to high school students learning forestry trades in an ag mechanics classroom.
+
+[img:https://res.cloudinary.com/drpr93xmp/image/upload/q_auto/f_auto/v1781028670/WL-Still-05_ygeb5s.jpg|A community-member burn on a resident's own property. The film follows people working to put prescribed fire back on the landscape at every scale, from federal agencies to neighbors with drip torches.]
+
+**The Production**
+
+This was the largest project Riparian Studios has undertaken to date.
+
+**Research**
+
+We spent months in archival research before a camera ever rolled. That included two trips to Quincy, California, in Plumas County, which sits at the center of one of the more remarkable stories in this film: the Quincy Library Group. In 1992, a timber industry forester, a county supervisor, and an environmental attorney started meeting in the public library to negotiate a way out of the timber wars. The resulting plan led to federal legislation in 1998. The outcome is still debated. But the act of sitting across the table from someone you've been fighting in court, and trying to find common ground, felt like exactly the kind of story we needed to tell right now.
+
+[img:https://res.cloudinary.com/drpr93xmp/image/upload/q_auto/f_auto/v1781025560/WL-Still-01_bqmzjz.jpg|Front page of the Feather River Bulletin, August 4, 1993. Archival research at Feather Publishing in Quincy turned up real-time coverage of the Quincy Library Group from the early 1990s.]
+
+On one of those trips to Quincy, we climbed the stairs of a building owned by Feather Publishing and spent an afternoon going through newspaper clippings from the 1990s, looking for coverage of the QLG in real time. There's something irreplaceable about holding that material in your hands.
+
+We also reunited two of the original Quincy Library Group members, Michael B. Jackson and Bill Coates, for the first time in many years. Jackson was the environmental attorney. Coates was a city council member who understood what the timber industry meant to the community. Getting them together on camera, after everything that happened, was one of the genuine privileges of making this film.
+
+[img:https://res.cloudinary.com/drpr93xmp/image/upload/q_auto/f_auto/v1781025559/WL-Still-02_kw7liy.jpg|Michael B. Jackson and Bill Coates, two original members of the Quincy Library Group, reunited on camera for the first time in years. Jackson was the environmental attorney; Coates was the city council member.]
+
+Beyond Quincy, archival materials came from an unusually wide range of sources: the Nevada County Historical Society, the U.S. Forest Service, the National Archives, the Library of Congress, and the U.S. Fish and Wildlife Service. We also tracked down footage from the City of Lakewood, California, which captured suburban development during the postwar building boom, to put timber demand into visual and historical context. The full list of archival contributors runs long, and we're grateful for all of it.
+
+**Animation**
+
+One of the biggest additions to this production was bringing in Jonathan Cooksey for custom motion graphics. The film deals with data that's hard to visualize without help: forest density over time, the ratio of California timber imports to exports, the breakdown of who actually owns California's forestland (the federal government, as it turns out, holds the lion's share). Cooksey's work gives those numbers a shape that sticks.
+
+[img:https://res.cloudinary.com/drpr93xmp/image/upload/q_auto/f_auto/v1781025559/WL-Still-03_wayebu.jpg|Custom motion graphics by Jonathan Cooksey. The Dixie Fire alone destroyed an estimated 10-12 billion board feet of timber, against California's annual harvest of 1.7 billion.]
+
+**Music**
+
+Volume III has an original score, composed by Jarrett Farkas. This was a first for the series and a first for Riparian Studios. Having music written for the film, rather than licensed to it, changes how the emotional arc lands. Farkas built the score to serve the material, and it shows.
+
+**The crew**
+
+Director of Photography Val Camp shot the film. Production was managed by Sofia Grace and Wrenna Young. Additional cinematography by Kit Kohler.
+
+**What the Film Covers**
+
+The narrative moves from the past forward. We look at how California's forests were shaped by both extractive logging and a century of fire suppression, two forces that together produced the overstocked, fuel-heavy landscape that feeds today's megafires. We examine the collapse of California's milling capacity and what it means that 79% of the lumber used in the state now comes from out of state. We look at how NEPA's environmental review process, well-intentioned and necessary, has also contributed to gridlock in forest management on federal land.
+
+We also look at what's working, or what's trying to work. The Camptonville Community Partnership's biomass cogeneration facility, being developed in Yuba County, represents one model for creating an economic outlet for forest thinning material, which is otherwise a cost without a market. Without that outlet, the math on large-scale fuels reduction doesn't pencil out.
+
+And we end at Nevada Union High School's Ag Mechanics Department, with students learning the trades and skills that forest management will need. It's a choice to close there. The problem is generational. So, maybe, is the solution.
+
+**Premiere**
+
+The film premieres on Tuesday, June 30, 2026 at 5:00 PM at the Don Baggett Theatre at Nevada Union High School in Grass Valley. Admission is free.
+
+We hope to see you there.`,
+  },
   {
     slug: 'two-films-one-mission-snmh-foundation',
     title: 'Two Films, One Mission: Supporting Sierra Nevada Memorial Hospital',
