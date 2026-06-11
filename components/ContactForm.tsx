@@ -71,7 +71,7 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+      <div className="rs-grid-2" style={{ gap: 16 }}>
         <div>
           <label htmlFor="name" style={labelStyle}>Name</label>
           <input id="name" name="name" type="text" required style={inputStyle} placeholder="Your name" />
