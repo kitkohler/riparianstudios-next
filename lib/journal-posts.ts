@@ -19,6 +19,56 @@ export interface JournalPost {
 
 export const JOURNAL_POSTS: JournalPost[] = [
   {
+    slug: 'momi-jokoj',
+    title: 'Bringing Momi Jokoj Home: A Film for the Land Back Campaign',
+    date: 'July 2026',
+    isoDate: '2026-07-14',
+    category: 'New Work',
+    videoId: 'B_oF1ydAVvk',
+    client: 'Indigenous Futures Society',
+    premiereDate: 'Tuesday, July 15, 2026',
+    premiereLocation: 'Crest Theater · Sacramento',
+    eventbriteUrl: 'https://indigenousfuturessociety.org/out-stories/ifs-film-momi-jokoj-to-open-at-we-are-still-here-premiere-july-15/',
+    excerpt: 'Riparian Studios produced a short documentary for the Indigenous Futures Society to support their campaign to bring 3,200 acres of ancestral Nisenan land, Momi Jokoj (Raccoon Creek), back into Native hands.',
+    body: `Riparian Studios produced a short documentary for the Indigenous Futures Society (IFS) to support their campaign to bring 3,200 acres of ancestral Nisenan land, Momi Jokoj (Raccoon Creek), back into Native hands.
+
+The property, located north of Lincoln, California, was nearly developed for a gravel pit before the IFS began the process of reacquiring it for the Nisenan people. We were honored to have the opportunity to assist in documenting this campaign.
+
+**A Place That Was Never Really Gone**
+
+The land at the center of this campaign carries deep history. Nisenan families have direct, documented ties here that go back generations, and several of the tribal leaders and knowledge holders who sat down with us on camera are descended from people who lived, gathered, and tended this exact ground. One of the things that struck our crew most, standing along the creek with a camera between us, was how immediate that connection still is. This is not abstract history. It is a living relationship that colonization interrupted but never severed.
+
+We spent two days on location conducting interviews and capturing footage of the landscape. Our production approach focused on providing a platform for tribal leaders and knowledge holders to document their ongoing relationship with the land and the history of their families in the region.
+
+**Getting the Story Right**
+
+Our production process involved close coordination with the IFS team to ensure the film accurately represented their narrative. This collaboration included refining the story structure, verifying titles and terminology, and ensuring the "once-in-a-generation" framing aligned with the IFS objectives for the campaign.
+
+IFS was generous with us in return, sharing brand materials, voiceover language, and historical imagery, including artwork from Dalbert Castro, a Nisenan artist whose work gave us a visual thread connecting the land's past to its present. Having access to that history let us build a film that feels rooted rather than assembled.
+
+Along the way we hit the ordinary bumps of any documentary shoot: software crashes, a shoot day that ran longer than planned, a production schedule that had to bend without breaking. None of it changed the standard we were holding ourselves to. When timelines tightened, we moved from a fixed schedule to an all-hands, ASAP posture, because getting this film right mattered more than getting it fast.
+
+**What's Ahead**
+
+The finished film will premiere ahead of "We Are Still Here" at the historic Crest Theater in Sacramento on July 15, 2026. It is a fitting room for a film like this one, and we could not be more grateful to be part of the evening's program alongside the other work being shown.
+
+Ahead of that premiere, we are sharing a short teaser to give you a first look at Momi Jokoj and the people working to bring it home.
+
+[embed:B_oF1ydAVvk]
+
+The full film will be added to this page once it premieres. We will also link directly to Momi Jokoj's fundraising page once it is live, so that anyone moved by this story has a clear way to support the campaign.
+
+**Why This One Mattered**
+
+This project provided an opportunity to document a significant land back initiative in our region. Our role was to provide professional production services to help communicate the history and specific goals of the Momi Jokoj acquisition to a wider audience.
+
+We are proud of the film we made together. More than that, we are grateful for the trust it took to make it, and we hope it helps carry this land the rest of the way home.
+
+**What Our Partners Said**
+
+"Our nonprofit Indigenous Futures Society loved working with Kit, Val, and team at Riparian Studios. We are very proud of the short film we produced together. Their professionalism and genuine care for the project shines through." — Laura, Indigenous Futures Society.`,
+  },
+  {
     slug: 'working-lands-iii',
     title: 'Working Lands Volume III: The History of Forestry and Fire in Nevada County',
     date: 'June 2026',
