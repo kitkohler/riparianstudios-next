@@ -37,7 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
         {/* @ts-expect-error custom element */}
-        <elevenlabs-convai agent-id="agent_2701ky1jefmsf65bqjmee383btr7"></elevenlabs-convai>
+        <elevenlabs-convai agent-id="agent_2701ky1jefmsf65bqjmee383btr7" disable-banner="true"></elevenlabs-convai>
       </body>
     </html>
   );
