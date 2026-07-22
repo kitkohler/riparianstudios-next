@@ -30,11 +30,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+        <script src="https://elevenlabs.io/convai-widget/index.js" async></script>
       </head>
       <body>
         <Header />
         <main>{children}</main>
         <Footer />
+        {/* @ts-expect-error custom element */}
+        <elevenlabs-convai agent-id="agent_2701ky1jefmsf65bqjmee383btr7"></elevenlabs-convai>
       </body>
     </html>
   );
